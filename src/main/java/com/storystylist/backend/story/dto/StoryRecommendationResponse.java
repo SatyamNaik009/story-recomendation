@@ -1,0 +1,2 @@
+package com.storystylist.backend.story.dto;
+public record StoryRecommendationResponse(String status, String requestId, com.storystylist.backend.ai.domain.AiProvider provider, String model, int photoCount, java.util.List<StoryRecommendation> recommendations, java.util.List<PhotoAssetMetadata> assets, long latencyMillis, com.storystylist.backend.ai.domain.AiUsageMetadata usage, String promptVersion) {}

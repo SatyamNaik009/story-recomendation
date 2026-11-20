@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "properties": {
+    "overallMood": {
+      "type": "string"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "photoId": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "lighting": {
+            "type": "string"
+          },
+          "composition": {
+            "type": "string"
+          },
+          "visualStrengths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "visualWeaknesses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "photoId",
+          "description",
+          "lighting",
+          "composition",
+          "visualStrengths",
+          "visualWeaknesses"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "groupAnalysis": {
+      "type": "object",
+      "properties": {
+        "commonTheme": {
+          "type": "string"
+        },
+        "complementaryPhotoIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "observations": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "commonTheme",
+        "complementaryPhotoIds",
+        "observations"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "overallMood",
+    "photos",
+    "groupAnalysis"
+  ],
+  "additionalProperties": false
+}
